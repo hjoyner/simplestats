@@ -11,8 +11,14 @@ def mean(vals):
     return total/length
 
 def median(vals):
-    """please implement this function"""
-    return 1
+    """Computes the median from a list of values."""
+    vals.sort()
+    z = len(vals)
+    index = z / 2
+    if z % 2 == 0:
+       return mean([vals[index], vals[index - 1]])
+    else:
+       return vals[index]
 
 def mode(vals):
     """Computes the mode from a list of values."""
